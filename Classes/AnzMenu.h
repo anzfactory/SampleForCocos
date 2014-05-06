@@ -23,17 +23,18 @@ public:
     static AnzMenu* createWithArray(const cocos2d::Vector<cocos2d::MenuItem*>& arrayOfItems);
     
     virtual bool initWithArray(const cocos2d::Vector<cocos2d::MenuItem*>& arrayOfItems);
-    virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
-    virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-    virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
-    virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
-
+    
     cocos2d::Menu::State getState();
     cocos2d::MenuItem* getCurrentMenuItem();
     
     void setCallbackTracking(std::function<void(cocos2d::MenuItem*)> callback);
     
 protected:
+    
+    virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
+    virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
+    virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
     
 private:
 

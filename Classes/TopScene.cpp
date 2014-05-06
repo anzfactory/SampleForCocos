@@ -9,6 +9,7 @@
 #include "TopScene.h"
 
 #include "MenuSampleScene.h"
+#include "SoundMenuSampleScene.h"
 
 USING_NS_CC;
 using namespace std;
@@ -44,9 +45,10 @@ bool TopScene::init()
 
 void TopScene::createMenu()
 {    
-    auto itemAnzMenu = createMenuItem("AnzMenuSample", (int)TopMenuItem::kItemAnzMenuSample);
+    auto itemMenu = createMenuItem("MenuSample", (int)TopMenuItem::kItemMenuSample);
+    auto itemSoundMenu = createMenuItem("SouneMenuSample", (int)TopMenuItem::kItemSoundMenuSample);
     
-    auto menu = Menu::create(itemAnzMenu, NULL);
+    auto menu = Menu::create(itemMenu, itemSoundMenu, NULL);
     menu->setPosition(Point::ZERO);
     addChild(menu, Tags::kTagTopMenu);
     
@@ -62,7 +64,7 @@ MenuItem* TopScene::createMenuItem(const char *label, int tag)
     auto p = Point::ZERO;
     auto size = getContentSize();
     p.x = size.width * 0.5;
-    p.y = size.height * 0.5;
+    p.y = size.height - ((size.height / (TopScene::kNumMenuItem + 1)) * tag);
     auto item = MenuItemSprite::create(normal, selected, CC_CALLBACK_1(TopScene::tapMenu, this));
     item->setTag(tag);
     item->setPosition(p);
@@ -73,8 +75,12 @@ void TopScene::tapMenu(cocos2d::Ref *sender)
 {
     TopMenuItem tag = (TopMenuItem)((Node *)sender)->getTag();
     switch (tag) {
-        case kItemAnzMenuSample:
-            Director::getInstance()->replaceScene(MenuSampleScene::createScene());
+        case kItemMenuSample:
+            Director::getInstance()->pushScene(MenuSampleScene::createScene());
+            break;
+            
+        case kItemSoundMenuSample:
+            Director::getInstance()->pushScene(SoundMenuSampleScene::createScene());
             break;
             
         default:

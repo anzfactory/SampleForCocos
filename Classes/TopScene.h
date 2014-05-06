@@ -25,9 +25,10 @@ protected:
     
 private:
     
-    const int kNumMenuItem = 1;
+    const int kNumMenuItem = 2;
     enum TopMenuItem {
-        kItemAnzMenuSample = 1,
+        kItemMenuSample = 1,
+        kItemSoundMenuSample,
     };
     enum Tags {
         kTagTopMenu = 1,

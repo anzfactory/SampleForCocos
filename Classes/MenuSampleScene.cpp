@@ -8,7 +8,6 @@
 
 #include "MenuSampleScene.h"
 
-#include "TopScene.h"
 #include "AnzMenu.h"
 
 USING_NS_CC;
@@ -89,7 +88,7 @@ void MenuSampleScene::setupMenu()
     
     auto back = createMenuItem("back", -1);
     back->setCallback([](Ref *sender) {
-        Director::getInstance()->replaceScene(TopScene::createScene());
+        Director::getInstance()->popScene();
     });
     back->setAnchorPoint(Point::ANCHOR_MIDDLE_BOTTOM);
     back->setPosition(size.width * 0.5, 0);

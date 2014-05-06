@@ -27,7 +27,10 @@ public:
     cocos2d::Menu::State getState();
     cocos2d::MenuItem* getCurrentMenuItem();
     
+    // properties
     void setCallbackTracking(std::function<void(cocos2d::MenuItem*)> callback);
+    void setSoundFilePath(const char *soundFilePath);
+    void setSoundFilePath(const char *soundFilePath, bool isPreLoad);
     
 protected:
     
@@ -39,8 +42,10 @@ protected:
 private:
 
     std::function<void(cocos2d::MenuItem*)> callbackTracking_;
+    const char *soundFilePath_;
     
     void update(float dt);
+    void soundEffect();
     
 };
 

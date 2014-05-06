@@ -59,6 +59,8 @@
 		A13A43111918B5100088B73E /* TopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A430F1918B5100088B73E /* TopScene.cpp */; };
 		A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431A1918DE640088B73E /* MenuSampleScene.cpp */; };
 		A13A43211918EC8F0088B73E /* AnzMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431F1918EC8F0088B73E /* AnzMenu.cpp */; };
+		A13A43261919370B0088B73E /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A13A43251919370B0088B73E /* click.mp3 */; };
+		A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -259,6 +261,9 @@
 		A13A431B1918DE640088B73E /* MenuSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuSampleScene.h; path = ../Classes/MenuSampleScene.h; sourceTree = "<group>"; };
 		A13A431F1918EC8F0088B73E /* AnzMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnzMenu.cpp; path = ../Classes/AnzMenu.cpp; sourceTree = "<group>"; };
 		A13A43201918EC8F0088B73E /* AnzMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnzMenu.h; path = ../Classes/AnzMenu.h; sourceTree = "<group>"; };
+		A13A43251919370B0088B73E /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
+		A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundMenuSampleScene.cpp; path = ../Classes/SoundMenuSampleScene.cpp; sourceTree = "<group>"; };
+		A13A432B19193FB90088B73E /* SoundMenuSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundMenuSampleScene.h; path = ../Classes/SoundMenuSampleScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -454,7 +459,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A13A431D1918DEDC0088B73E /* MenuSampleScene */,
+				A13A4324191936F10088B73E /* Sounds */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 			);
 			name = Resources;
@@ -468,6 +473,8 @@
 				A13A43101918B5100088B73E /* TopScene.h */,
 				A13A431A1918DE640088B73E /* MenuSampleScene.cpp */,
 				A13A431B1918DE640088B73E /* MenuSampleScene.h */,
+				A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */,
+				A13A432B19193FB90088B73E /* SoundMenuSampleScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -481,11 +488,12 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		A13A431D1918DEDC0088B73E /* MenuSampleScene */ = {
+		A13A4324191936F10088B73E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A13A43251919370B0088B73E /* click.mp3 */,
 			);
-			name = MenuSampleScene;
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,7 +549,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "cocos3" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -656,6 +664,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				A13A43261919370B0088B73E /* click.mp3 in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -690,6 +699,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */,
+				A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,9 +832,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -851,9 +861,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;

@@ -8,8 +8,11 @@
 
 #include "AnzMenu.h"
 
+#include "SimpleAudioEngine.h"
+
 USING_NS_CC;
 using namespace std;
+using namespace CocosDenshion;
 
 AnzMenu::AnzMenu()
 {
@@ -72,12 +75,14 @@ bool AnzMenu::initWithArray(const Vector<MenuItem*>& arrayOfItems)
     }
 
     callbackTracking_ = nullptr;
+    soundFilePath_ = nullptr;
     
     return true;
 }
 
 bool AnzMenu::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    // 該当するMenuItemがなければfalseが返ってくる
     if ( ! Menu::onTouchBegan(touch, event)) {
         return false;
     }
@@ -85,6 +90,8 @@ bool AnzMenu::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
     if ( callbackTracking_ != nullptr && _selectedItem != nullptr) {
         scheduleUpdate();
     }
+    
+    soundEffect();
     
     return true;
 }
@@ -121,10 +128,12 @@ void AnzMenu::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event)
         return;
     }
     
+    // ココに来るときは画面タップ状態で一旦領域から外れて戻ってきた時
     if (_state == State::WAITING) {
         unscheduleUpdate();
     } else if (_state == State::TRACKING_TOUCH) {
         scheduleUpdate();
+        soundEffect();
     }
 }
 
@@ -143,11 +152,32 @@ void AnzMenu::setCallbackTracking(std::function<void (cocos2d::MenuItem *)> call
     callbackTracking_ = callback;
 }
 
+void AnzMenu::setSoundFilePath(const char *soundFilePath)
+{
+    setSoundFilePath(soundFilePath, true);
+}
+
+void AnzMenu::setSoundFilePath(const char *soundFilePath, bool isPreLoad)
+{
+    soundFilePath_ = soundFilePath;
+    if (isPreLoad) {
+        SimpleAudioEngine::getInstance()->preloadEffect(soundFilePath_);
+    }
+}
+
 void AnzMenu::update(float dt)
 {
     if (callbackTracking_ == nullptr || _selectedItem == nullptr) {
         return;
     }
     callbackTracking_(_selectedItem);
+}
+
+void AnzMenu::soundEffect()
+{
+    if (soundFilePath_ == nullptr) {
+        return;
+    }
+    SimpleAudioEngine::getInstance()->playEffect(soundFilePath_);
 }
 

@@ -61,6 +61,7 @@
 		A13A43211918EC8F0088B73E /* AnzMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431F1918EC8F0088B73E /* AnzMenu.cpp */; };
 		A13A43261919370B0088B73E /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A13A43251919370B0088B73E /* click.mp3 */; };
 		A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */; };
+		A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -264,6 +265,7 @@
 		A13A43251919370B0088B73E /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundMenuSampleScene.cpp; path = ../Classes/SoundMenuSampleScene.cpp; sourceTree = "<group>"; };
 		A13A432B19193FB90088B73E /* SoundMenuSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundMenuSampleScene.h; path = ../Classes/SoundMenuSampleScene.h; sourceTree = "<group>"; };
+		A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MarkerFelt.ttf; path = fonts/MarkerFelt.ttf; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -459,6 +461,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */,
 				A13A4324191936F10088B73E /* Sounds */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 			);
@@ -667,6 +670,7 @@
 				A13A43261919370B0088B73E /* click.mp3 in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,

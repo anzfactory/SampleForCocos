@@ -61,10 +61,13 @@ MenuItem* TopScene::createMenuItem(const char *label, int tag)
     auto selected = Label::createWithSystemFont(label, "Arial", 40);
     selected->setColor(Color3B::GRAY);
     
+    Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("hogehoge", this);
+    
     auto p = Point::ZERO;
     auto size = getContentSize();
     p.x = size.width * 0.5;
-    p.y = size.height - ((size.height / (TopScene::kNumMenuItem + 1)) * tag);
+    p.y = size.height - (size.height * (1.f / (TopMenuItem::kItemCount + 1)) * (tag + 1));
+    
     auto item = MenuItemSprite::create(normal, selected, CC_CALLBACK_1(TopScene::tapMenu, this));
     item->setTag(tag);
     item->setPosition(p);
@@ -82,7 +85,7 @@ void TopScene::tapMenu(cocos2d::Ref *sender)
         case kItemSoundMenuSample:
             Director::getInstance()->pushScene(SoundMenuSampleScene::createScene());
             break;
-            
+                        
         default:
             break;
     }

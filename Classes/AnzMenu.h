@@ -31,6 +31,7 @@ public:
     void setCallbackTracking(std::function<void(cocos2d::MenuItem*)> callback);
     void setSoundFilePath(const char *soundFilePath);
     void setSoundFilePath(const char *soundFilePath, bool isPreLoad);
+    void isSound(bool isOn);
     
 protected:
     
@@ -43,6 +44,7 @@ private:
 
     std::function<void(cocos2d::MenuItem*)> callbackTracking_;
     const char *soundFilePath_;
+    bool soundOn_;
     
     void update(float dt);
     void soundEffect();

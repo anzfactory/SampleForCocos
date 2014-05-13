@@ -76,6 +76,7 @@ bool AnzMenu::initWithArray(const Vector<MenuItem*>& arrayOfItems)
 
     callbackTracking_ = nullptr;
     soundFilePath_ = nullptr;
+    soundOn_ = true;
     
     return true;
 }
@@ -165,6 +166,11 @@ void AnzMenu::setSoundFilePath(const char *soundFilePath, bool isPreLoad)
     }
 }
 
+void AnzMenu::isSound(bool isOn)
+{
+    soundOn_ = isOn;
+}
+
 void AnzMenu::update(float dt)
 {
     if (callbackTracking_ == nullptr || _selectedItem == nullptr) {
@@ -175,7 +181,7 @@ void AnzMenu::update(float dt)
 
 void AnzMenu::soundEffect()
 {
-    if (soundFilePath_ == nullptr) {
+    if (soundFilePath_ == nullptr || ! soundOn_) {
         return;
     }
     SimpleAudioEngine::getInstance()->playEffect(soundFilePath_);

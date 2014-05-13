@@ -62,6 +62,7 @@ void SoundMenuSampleScene::setupMenu()
     auto menu = AnzMenu::create(clickMe, back, NULL);
     menu->setPosition(Point::ZERO);
     menu->setSoundFilePath("click.mp3");    // 効果音設定
+
     addChild(menu);
 }
 

@@ -24,6 +24,11 @@ Menuのおしっぱ判定サンプル
 Menuの一括効果音設定サンプル
 `AnzMenu`(Menuを継承したもの)使用
 
+### MenuOffsetSample
+
+MenuのMenuItem達を一括でoffset指定移動  
+`AnzMenu`(Menuを継承したもの)使用
+
 
 ## CREDIT
 

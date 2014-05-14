@@ -28,6 +28,7 @@ private:
     enum TopMenuItem {
         kItemMenuSample = 0,
         kItemSoundMenuSample,
+        kItemMenuOffsetSample,
         kItemCount,
     };
     enum Tags {

@@ -171,6 +171,19 @@ void AnzMenu::isSound(bool isOn)
     soundOn_ = isOn;
 }
 
+void AnzMenu::setChildrenPositionOffset(cocos2d::Point offset)
+{
+    auto children = getChildren();
+    if (children.empty()) {
+        return;
+    }
+    
+    for (auto child : children) {
+        auto p = child->getPosition();
+        child->setPosition(p.x + offset.x, p.y + offset.y);
+    }
+}
+
 void AnzMenu::update(float dt)
 {
     if (callbackTracking_ == nullptr || _selectedItem == nullptr) {

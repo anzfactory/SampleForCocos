@@ -33,6 +33,9 @@ public:
     void setSoundFilePath(const char *soundFilePath, bool isPreLoad);
     void isSound(bool isOn);
     
+    // items一括移動
+    void setChildrenPositionOffset(cocos2d::Point offset);
+    
 protected:
     
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);

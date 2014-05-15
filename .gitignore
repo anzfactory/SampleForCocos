@@ -21,3 +21,6 @@ DerivedData
 Pods
 
 *.xcuserstate
+
+# cocos
+/cocos2d/*

@@ -11,6 +11,7 @@
 #include "MenuSampleScene.h"
 #include "SoundMenuSampleScene.h"
 #include "MenuOffsetSample.h"
+#include "CameraSample.h"
 
 USING_NS_CC;
 using namespace std;
@@ -49,8 +50,9 @@ void TopScene::createMenu()
     auto itemMenu = createMenuItem("MenuSample", (int)TopMenuItem::kItemMenuSample);
     auto itemSoundMenu = createMenuItem("SouneMenuSample", (int)TopMenuItem::kItemSoundMenuSample);
     auto itemOffset = createMenuItem("MenuOffsetSample", (int)TopMenuItem::kItemMenuOffsetSample);
+    auto itemCamera = createMenuItem("CameraSample", (int)TopMenuItem::kItemCameraSample);
     
-    auto menu = Menu::create(itemMenu, itemSoundMenu, itemOffset, NULL);
+    auto menu = Menu::create(itemMenu, itemSoundMenu, itemOffset, itemCamera, NULL);
     menu->setPosition(Point::ZERO);
     addChild(menu, Tags::kTagTopMenu);
     
@@ -90,6 +92,9 @@ void TopScene::tapMenu(cocos2d::Ref *sender)
             
         case kItemMenuOffsetSample:
             Director::getInstance()->pushScene(MenuOffsetSample::createScene());
+            
+        case kItemCameraSample:
+            Director::getInstance()->pushScene(CameraSample::createScene());
             
         default:
             break;

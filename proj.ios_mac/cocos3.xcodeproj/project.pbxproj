@@ -62,6 +62,8 @@
 		A13A43261919370B0088B73E /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A13A43251919370B0088B73E /* click.mp3 */; };
 		A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A432A19193FB90088B73E /* SoundMenuSampleScene.cpp */; };
 		A13AE8E91923CC5700C53E59 /* MenuOffsetSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AE8E71923CC5700C53E59 /* MenuOffsetSample.cpp */; };
+		A18796811926FA1900FDDFAA /* CameraSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A187967F1926FA1900FDDFAA /* CameraSample.cpp */; };
+		A18796851926FBBD00FDDFAA /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = A18796841926FBBD00FDDFAA /* words.plist */; };
 		A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -268,6 +270,9 @@
 		A13A432B19193FB90088B73E /* SoundMenuSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundMenuSampleScene.h; sourceTree = "<group>"; };
 		A13AE8E71923CC5700C53E59 /* MenuOffsetSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuOffsetSample.cpp; sourceTree = "<group>"; };
 		A13AE8E81923CC5700C53E59 /* MenuOffsetSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuOffsetSample.h; sourceTree = "<group>"; };
+		A187967F1926FA1900FDDFAA /* CameraSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraSample.cpp; sourceTree = "<group>"; };
+		A18796801926FA1900FDDFAA /* CameraSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSample.h; sourceTree = "<group>"; };
+		A18796841926FBBD00FDDFAA /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MarkerFelt.ttf; path = fonts/MarkerFelt.ttf; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -469,6 +474,7 @@
 				A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */,
 				A13A4324191936F10088B73E /* Sounds */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
+				A18796841926FBBD00FDDFAA /* words.plist */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -483,6 +489,8 @@
 				A13A432B19193FB90088B73E /* SoundMenuSampleScene.h */,
 				A13AE8E71923CC5700C53E59 /* MenuOffsetSample.cpp */,
 				A13AE8E81923CC5700C53E59 /* MenuOffsetSample.h */,
+				A187967F1926FA1900FDDFAA /* CameraSample.cpp */,
+				A18796801926FA1900FDDFAA /* CameraSample.h */,
 			);
 			name = Scene;
 			path = ../Classes/SampleScene;
@@ -669,6 +677,7 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				A18796851926FBBD00FDDFAA /* words.plist in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
@@ -711,6 +720,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */,
 				A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */,
+				A18796811926FA1900FDDFAA /* CameraSample.cpp in Sources */,
 				A13AE8E91923CC5700C53E59 /* MenuOffsetSample.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

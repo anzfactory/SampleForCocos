@@ -55,6 +55,10 @@ Menuの一括効果音設定サンプル
 MenuのMenuItem達を一括でoffset指定移動  
 `AnzMenu`(Menuを継承したもの)使用
 
+### CameraSample
+
+Cameraの視点いじってみたさんぷる
+
 
 ## CREDIT
 

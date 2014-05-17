@@ -32,7 +32,6 @@ private:
     };
     
     cocos2d::Vector<cocos2d::Label*> items_;
-    cocos2d::ActionCamera *camera_;
     
     void setCamera();
     

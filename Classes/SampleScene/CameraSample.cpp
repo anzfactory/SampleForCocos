@@ -18,7 +18,7 @@ CameraSample::CameraSample()
 
 CameraSample::~CameraSample()
 {
-    delete camera_;
+    
 }
 
 Scene* CameraSample::createScene()
@@ -52,20 +52,30 @@ bool CameraSample::init()
 /** カメラセッティング */
 void CameraSample::setCamera()
 {
+    auto size = getContentSize();
     auto cameraLayer = Layer::create();
     cameraLayer->setTag(Tags::kTagCamleraLayer);
     addChild(cameraLayer);
     
-    camera_ = new ActionCamera();
     
-    // 全体に効果を及ぼしたい場合は
-    // thisをターゲットにしたらいい
-    camera_->setTarget(cameraLayer);
+    // rotation3Dを使った手法
+    auto rotation3D = cameraLayer->getRotation3D();
+    rotation3D.x = -35;
+    cameraLayer->setRotation3D(rotation3D);
     
-    // camera の始点を設定
-    auto eye = camera_->getEye();
-    eye.y -= 0.0000003;
-    camera_->setEye(eye);
+    
+//    // ActionCameraをつかった手法
+//    auto camera = new ActionCamera();
+//    
+//    // 全体に効果を及ぼしたい場合は
+//    // thisをターゲットにしたらいい
+//    camera->setTarget(cameraLayer);
+//    
+//    // camera の始点を設定
+//    auto eye = camera->getEye();
+//    eye.y = -0.0000003;
+//    camera->setEye(eye);
+    
     
 }
 
@@ -80,7 +90,7 @@ void CameraSample::prepare()
     
     // 背景
     // これはthisにaddchildしているので
-    // camera支店変更の影響は及ばない
+    // camera視点変更の影響は及ばない
     auto bg = Sprite::create("HelloWorld.png");
     bg->setAnchorPoint(Point::ANCHOR_MIDDLE_TOP);
     bg->setPosition(Point(size.width * .5f, size.height - 20));
@@ -95,6 +105,7 @@ void CameraSample::prepare()
         label->setAnchorPoint(Point::ANCHOR_MIDDLE_TOP);
         label->setPosition(Point(size.width * .5f, label->getContentSize().height * -1));
         label->setVisible(false);
+        label->setRotation3D(cameraLayer->getRotation3D());     // rotation3Dで傾けたい場合、Cameraでやるなら不要
         items_.pushBack(label);
         cameraLayer->addChild(label);
     }

@@ -65,8 +65,6 @@ MenuItem* TopScene::createMenuItem(const char *label, int tag)
     auto selected = Label::createWithSystemFont(label, "Arial", 40);
     selected->setColor(Color3B::GRAY);
     
-    Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("hogehoge", this);
-    
     auto p = Point::ZERO;
     auto size = getContentSize();
     p.x = size.width * 0.5;

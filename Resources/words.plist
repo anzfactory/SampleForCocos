@@ -2,16 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>I thought what I&apos;d do was, </string>
-	<string>I&apos;d pretend</string>
-	<string>I was one of those deaf-mutes.</string>
+	<string>cocos2d-x is a multi-platform</string>
+	<string>framework for building 2d games,</string>
+	<string>interactive books, demos and</string>
+	<string>other graphical applications.</string>
 	<string></string>
+	<string>It is based on cocos2d-iphone,</string>
+	<string>but instead of using Objective-C,</string>
+	<string>it uses C++. It works on iOS,</string>
+	<string>Android, Windows Phone, OS X,</string>
+	<string>Windows and Linux.</string>
 	<string></string>
-	<string>世の中に不満があるなら</string>
-	<string>自分を変えろ</string>
-	<string>それが嫌なら、</string>
-	<string>耳と目を閉じ、</string>
-	<string>口をつぐんで</string>
-	<string>孤独に暮らせ</string>
 </array>
 </plist>

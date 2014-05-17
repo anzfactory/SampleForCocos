@@ -83,7 +83,7 @@ void CameraSample::prepare()
     // camera支店変更の影響は及ばない
     auto bg = Sprite::create("HelloWorld.png");
     bg->setAnchorPoint(Point::ANCHOR_MIDDLE_TOP);
-    bg->setPosition(Point(size.width * .5f, size.height));
+    bg->setPosition(Point(size.width * .5f, size.height - 20));
     addChild(bg);
     
     // ながすアイテムの設定
@@ -91,7 +91,7 @@ void CameraSample::prepare()
     auto plist = FileUtils::getInstance()->getValueVectorFromFile("words.plist");
     
     for (auto item : plist) {
-        auto label = createLabel(item.asString().c_str(), 50);
+        auto label = createLabel(item.asString().c_str(), 40);
         label->setAnchorPoint(Point::ANCHOR_MIDDLE_TOP);
         label->setPosition(Point(size.width * .5f, label->getContentSize().height * -1));
         label->setVisible(false);

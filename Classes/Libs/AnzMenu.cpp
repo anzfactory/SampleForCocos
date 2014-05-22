@@ -148,6 +148,7 @@ MenuItem* AnzMenu::getCurrentMenuItem()
     return _selectedItem;
 }
 
+/** 押され続けられてるかどうか */
 void AnzMenu::setCallbackTracking(std::function<void (cocos2d::MenuItem *)> callback)
 {
     callbackTracking_ = callback;
@@ -169,6 +170,26 @@ void AnzMenu::setSoundFilePath(const char *soundFilePath, bool isPreLoad)
 void AnzMenu::isSound(bool isOn)
 {
     soundOn_ = isOn;
+}
+
+/** MenuItemで音変えたいならこっちも設定 tag=>filepath */
+void AnzMenu::setSoundList(std::map<int, const char *> soundList)
+{
+    setSoundList(soundList, true);
+}
+
+/** MenuItemで音変えたいならこっち tag=>filepath(true指定でPreLoad実施) */
+void AnzMenu::setSoundList(std::map<int, const char *> soundList, bool isPreLoad)
+{
+    soundList_ = soundList;
+    
+    if ( ! isPreLoad) {
+        return;
+    }
+    
+    for (auto kvs : soundList) {
+        SimpleAudioEngine::getInstance()->preloadEffect(kvs.second);
+    }
 }
 
 void AnzMenu::setChildrenPositionOffset(cocos2d::Point offset)
@@ -194,9 +215,23 @@ void AnzMenu::update(float dt)
 
 void AnzMenu::soundEffect()
 {
-    if (soundFilePath_ == nullptr || ! soundOn_) {
+    if (! soundOn_ || (soundFilePath_ == nullptr && soundList_.empty() )) {
         return;
     }
-    SimpleAudioEngine::getInstance()->playEffect(soundFilePath_);
+    
+    // リスト指定がないなら
+    if (soundList_.empty()) {
+        SimpleAudioEngine::getInstance()->playEffect(soundFilePath_);
+        return;
+    }
+    
+    // リストの中に該当するtagがあれば、そっちから
+    // なければメインのほう
+    if (soundList_.find(_selectedItem->getTag()) != soundList_.end()) {
+        auto kv = soundList_.at(_selectedItem->getTag());
+        SimpleAudioEngine::getInstance()->playEffect(kv);
+    } else {
+        SimpleAudioEngine::getInstance()->playEffect(soundFilePath_);
+    }
 }
 

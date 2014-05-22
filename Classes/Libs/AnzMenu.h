@@ -29,9 +29,16 @@ public:
     
     // properties
     void setCallbackTracking(std::function<void(cocos2d::MenuItem*)> callback);
+    void isSound(bool isOn);
+    
+    // 全部のMenuItemで同じならこっち
     void setSoundFilePath(const char *soundFilePath);
     void setSoundFilePath(const char *soundFilePath, bool isPreLoad);
-    void isSound(bool isOn);
+    
+    // 指定したSoundFileと違う音を鳴らしたい場合
+    // 違う音を鳴らしたいMenuItemのタグをキーにして、その音パスを値にして設定
+    void setSoundList(std::map<int, const char*> soundList);
+    void setSoundList(std::map<int, const char*> soundList, bool isPreLoad);
     
     // items一括移動
     void setChildrenPositionOffset(cocos2d::Point offset);
@@ -46,6 +53,7 @@ protected:
 private:
 
     std::function<void(cocos2d::MenuItem*)> callbackTracking_;
+    std::map<int, const char*> soundList_;
     const char *soundFilePath_;
     bool soundOn_;
     

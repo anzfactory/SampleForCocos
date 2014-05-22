@@ -38,26 +38,42 @@ submoduleも引っ張ってくる感じになってるので気にしないで�
 「サブモジュールを含む」にチェックがついてればok  
 逆に外せば、cocosのソースは落ちてこないはず
 
+## 自前ライブラリ的なもの
+
+### AnzMenu
+
+`Menu`を継承してあれこれカスタマイズしたもの
+
+* おしっぱ判定できる
+* クリック音を指定できる(tagでMenuItemごとに指定も可能)
+* MenuItemsを一律移動できる
+
 ## サンプル一覧(シーン別)
 
 ### MenuSample
 
 Menuのおしっぱ判定サンプル  
-`AnzMenu`(Menuを継承したもの)使用
+
+* `AnzMenu`
 
 ### SoundMenuSample
 
 Menuの一括効果音設定サンプル
-`AnzMenu`(Menuを継承したもの)使用
+
+* `AnzMenu`
 
 ### MenuOffsetSample
 
 MenuのMenuItem達を一括でoffset指定移動  
-`AnzMenu`(Menuを継承したもの)使用
+
+* `AnzMenu`
 
 ### CameraSample
 
 Cameraの視点いじってみたさんぷる
+
+* `Camera`
+* `Node::setRotation3D()`
 
 
 ## CREDIT

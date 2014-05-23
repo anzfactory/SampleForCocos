@@ -40,6 +40,8 @@ submoduleも引っ張ってくる感じになってるので気にしないで�
 
 ## 自前ライブラリ的なもの
 
+[ソース](https://github.com/anzfactory/SampleForCocos/tree/master/Classes/Libs)
+
 ### AnzMenu
 
 `Menu`を継承してあれこれカスタマイズしたもの

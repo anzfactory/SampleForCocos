@@ -56,6 +56,9 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		A103B25D192FA01B005FD7FF /* AnzSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A103B25B192FA01B005FD7FF /* AnzSound.cpp */; };
+		A103B260192FAF2D005FD7FF /* SoundActionSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */; };
+		A103B262192FB24B005FD7FF /* arasuji_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A103B261192FB24B005FD7FF /* arasuji_03.mp3 */; };
 		A13A43111918B5100088B73E /* TopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A430F1918B5100088B73E /* TopScene.cpp */; };
 		A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431A1918DE640088B73E /* MenuSampleScene.cpp */; };
 		A13A43211918EC8F0088B73E /* AnzMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431F1918EC8F0088B73E /* AnzMenu.cpp */; };
@@ -261,6 +264,11 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		A103B25B192FA01B005FD7FF /* AnzSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnzSound.cpp; sourceTree = "<group>"; };
+		A103B25C192FA01B005FD7FF /* AnzSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnzSound.h; sourceTree = "<group>"; };
+		A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundActionSampleScene.cpp; sourceTree = "<group>"; };
+		A103B25F192FAF2D005FD7FF /* SoundActionSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundActionSampleScene.h; sourceTree = "<group>"; };
+		A103B261192FB24B005FD7FF /* arasuji_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arasuji_03.mp3; sourceTree = "<group>"; };
 		A13A430F1918B5100088B73E /* TopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TopScene.cpp; path = ../Classes/TopScene.cpp; sourceTree = "<group>"; };
 		A13A43101918B5100088B73E /* TopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopScene.h; path = ../Classes/TopScene.h; sourceTree = "<group>"; };
 		A13A431A1918DE640088B73E /* MenuSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuSampleScene.cpp; sourceTree = "<group>"; };
@@ -495,6 +503,8 @@
 				A13AE8E81923CC5700C53E59 /* MenuOffsetSample.h */,
 				A187967F1926FA1900FDDFAA /* CameraSample.cpp */,
 				A18796801926FA1900FDDFAA /* CameraSample.h */,
+				A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */,
+				A103B25F192FAF2D005FD7FF /* SoundActionSampleScene.h */,
 			);
 			name = Scene;
 			path = ../Classes/SampleScene;
@@ -505,6 +515,8 @@
 			children = (
 				A13A431F1918EC8F0088B73E /* AnzMenu.cpp */,
 				A13A43201918EC8F0088B73E /* AnzMenu.h */,
+				A103B25B192FA01B005FD7FF /* AnzSound.cpp */,
+				A103B25C192FA01B005FD7FF /* AnzSound.h */,
 			);
 			name = Libs;
 			path = ../Classes/Libs;
@@ -513,6 +525,7 @@
 		A13A4324191936F10088B73E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A103B261192FB24B005FD7FF /* arasuji_03.mp3 */,
 				A1F902A8192D96CF0071690F /* se_click_1.mp3 */,
 				A1F902A9192D96CF0071690F /* se_click_2.mp3 */,
 				A1F902AA192D96CF0071690F /* se_te.mp3 */,
@@ -694,6 +707,7 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				A103B262192FB24B005FD7FF /* arasuji_03.mp3 in Resources */,
 				A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -724,7 +738,9 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				A13A43211918EC8F0088B73E /* AnzMenu.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				A103B25D192FA01B005FD7FF /* AnzSound.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				A103B260192FAF2D005FD7FF /* SoundActionSampleScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */,
 				A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */,

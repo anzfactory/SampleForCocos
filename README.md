@@ -48,6 +48,16 @@ submoduleも引っ張ってくる感じになってるので気にしないで�
 * クリック音を指定できる(tagでMenuItemごとに指定も可能)
 * MenuItemsを一律移動できる
 
+### AnzSound
+
+`ActionInstant`と`ActionInterval`を継承したクラス群  
+`runAction`内で自然に`SimpleAudioEngine`をさわれるようにしてみた
+
+* BGMの再生
+* BGMの停止
+* BGMの音量のFadeTo(徐々に大きくしたり、小さくしたり)
+
+
 ## サンプル一覧(シーン別)
 
 ### MenuSample
@@ -74,6 +84,12 @@ Cameraの視点いじってみたさんぷる
 
 * `Camera`
 * `Node::setRotation3D()`
+
+### SoundActionSample
+
+`AnzSound`のさんぷる  
+
+`runAction()`で「再生→徐々に音量大きく→徐々に音量小さく→停止」というのを実装
 
 
 ## CREDIT

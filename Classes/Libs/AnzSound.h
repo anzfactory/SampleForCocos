@@ -73,7 +73,7 @@ public:
     
     /**
      * @param duration 時間
-     * @param 最終的にどのボリュームにするか
+     * @param 最終的にするボリュームの値
      */
     static FadeToVolumeOfBGM* create(float duration, float volume);
     virtual FadeToVolumeOfBGM* clone() const;

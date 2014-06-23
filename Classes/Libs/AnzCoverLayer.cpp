@@ -21,6 +21,17 @@ AnzCoverLayer::~AnzCoverLayer()
     
 }
 
+AnzCoverLayer* AnzCoverLayer::create(Color4B color)
+{
+    auto pret = new AnzCoverLayer();
+    if (pret && pret->initWithColor4B(color)) {
+        pret->initWithColor4B(color);
+        return pret;
+    }
+    delete pret;
+    return nullptr;
+}
+
 bool AnzCoverLayer::initWithColor4B(cocos2d::Color4B color)
 {
     if (! LayerColor::initWithColor(color)) {
@@ -37,5 +48,6 @@ bool AnzCoverLayer::initWithColor4B(cocos2d::Color4B color)
 
 bool AnzCoverLayer::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 {
+    log("anz cover layer is on touch began");
     return false;
 }

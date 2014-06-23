@@ -17,6 +17,8 @@ class AnzCoverLayer : public cocos2d::LayerColor
 public:
     AnzCoverLayer();
     virtual ~AnzCoverLayer();
+    
+    static AnzCoverLayer* create(cocos2d::Color4B color);
     virtual bool initWithColor4B(cocos2d::Color4B color);
     
 protected:

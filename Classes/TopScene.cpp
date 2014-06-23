@@ -13,6 +13,7 @@
 #include "MenuOffsetSample.h"
 #include "CameraSample.h"
 #include "SoundActionSampleScene.h"
+#include "DebugScene.h"
 
 USING_NS_CC;
 using namespace std;
@@ -53,8 +54,9 @@ void TopScene::createMenu()
     auto itemOffset = createMenuItem("MenuOffsetSample", (int)TopMenuItem::kItemMenuOffsetSample);
     auto itemCamera = createMenuItem("CameraSample", (int)TopMenuItem::kItemCameraSample);
     auto itemSoundAction = createMenuItem("SoundActionSample", (int)TopMenuItem::kItemSoundActionSample);
+    auto itemDebug = createMenuItem("Debug", (int)TopMenuItem::kItemDebug);
     
-    auto menu = Menu::create(itemMenu, itemSoundMenu, itemOffset, itemCamera, itemSoundAction, NULL);
+    auto menu = Menu::create(itemMenu, itemSoundMenu, itemOffset, itemCamera, itemSoundAction, itemDebug, NULL);
     menu->setPosition(Point::ZERO);
     addChild(menu, Tags::kTagTopMenu);
     
@@ -62,7 +64,6 @@ void TopScene::createMenu()
 
 MenuItem* TopScene::createMenuItem(const char *label, int tag)
 {
-    
     auto normal = Label::createWithSystemFont(label, "Arial", 40);
     auto selected = Label::createWithSystemFont(label, "Arial", 40);
     selected->setColor(Color3B::GRAY);
@@ -99,6 +100,10 @@ void TopScene::tapMenu(cocos2d::Ref *sender)
             
         case kItemSoundActionSample:
             Director::getInstance()->pushScene(SoundActionSampleScene::createScene());
+            break;
+            
+        case kItemDebug:
+            Director::getInstance()->pushScene(DebugScene::createScene());
             
         default:
             break;

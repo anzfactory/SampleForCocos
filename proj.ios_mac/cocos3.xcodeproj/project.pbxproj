@@ -59,6 +59,8 @@
 		A103B25D192FA01B005FD7FF /* AnzSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A103B25B192FA01B005FD7FF /* AnzSound.cpp */; };
 		A103B260192FAF2D005FD7FF /* SoundActionSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */; };
 		A103B262192FB24B005FD7FF /* arasuji_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A103B261192FB24B005FD7FF /* arasuji_03.mp3 */; };
+		A10FACA81957D5B300046D27 /* AnzCoverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A10FACA61957D5B300046D27 /* AnzCoverLayer.cpp */; };
+		A12CFFAF194B6C84000F7430 /* DebugScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A12CFFAD194B6C84000F7430 /* DebugScene.cpp */; };
 		A13A43111918B5100088B73E /* TopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A430F1918B5100088B73E /* TopScene.cpp */; };
 		A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431A1918DE640088B73E /* MenuSampleScene.cpp */; };
 		A13A43211918EC8F0088B73E /* AnzMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13A431F1918EC8F0088B73E /* AnzMenu.cpp */; };
@@ -66,7 +68,7 @@
 		A13AE8E91923CC5700C53E59 /* MenuOffsetSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AE8E71923CC5700C53E59 /* MenuOffsetSample.cpp */; };
 		A18796811926FA1900FDDFAA /* CameraSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A187967F1926FA1900FDDFAA /* CameraSample.cpp */; };
 		A18796851926FBBD00FDDFAA /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = A18796841926FBBD00FDDFAA /* words.plist */; };
-		A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */; };
+		A1EE0C8519443B12007D0A60 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A1EE0C8419443B12007D0A60 /* fonts */; };
 		A1F902AB192D96CF0071690F /* se_click_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F902A8192D96CF0071690F /* se_click_1.mp3 */; };
 		A1F902AC192D96CF0071690F /* se_click_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F902A9192D96CF0071690F /* se_click_2.mp3 */; };
 		A1F902AD192D96CF0071690F /* se_te.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F902AA192D96CF0071690F /* se_te.mp3 */; };
@@ -269,6 +271,10 @@
 		A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundActionSampleScene.cpp; sourceTree = "<group>"; };
 		A103B25F192FAF2D005FD7FF /* SoundActionSampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundActionSampleScene.h; sourceTree = "<group>"; };
 		A103B261192FB24B005FD7FF /* arasuji_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arasuji_03.mp3; sourceTree = "<group>"; };
+		A10FACA61957D5B300046D27 /* AnzCoverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnzCoverLayer.cpp; sourceTree = "<group>"; };
+		A10FACA71957D5B300046D27 /* AnzCoverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnzCoverLayer.h; sourceTree = "<group>"; };
+		A12CFFAD194B6C84000F7430 /* DebugScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugScene.cpp; sourceTree = "<group>"; };
+		A12CFFAE194B6C84000F7430 /* DebugScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugScene.h; sourceTree = "<group>"; };
 		A13A430F1918B5100088B73E /* TopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TopScene.cpp; path = ../Classes/TopScene.cpp; sourceTree = "<group>"; };
 		A13A43101918B5100088B73E /* TopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopScene.h; path = ../Classes/TopScene.h; sourceTree = "<group>"; };
 		A13A431A1918DE640088B73E /* MenuSampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuSampleScene.cpp; sourceTree = "<group>"; };
@@ -282,7 +288,7 @@
 		A187967F1926FA1900FDDFAA /* CameraSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraSample.cpp; sourceTree = "<group>"; };
 		A18796801926FA1900FDDFAA /* CameraSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSample.h; sourceTree = "<group>"; };
 		A18796841926FBBD00FDDFAA /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
-		A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MarkerFelt.ttf; path = fonts/MarkerFelt.ttf; sourceTree = "<group>"; };
+		A1EE0C8419443B12007D0A60 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		A1F902A8192D96CF0071690F /* se_click_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_click_1.mp3; sourceTree = "<group>"; };
 		A1F902A9192D96CF0071690F /* se_click_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_click_2.mp3; sourceTree = "<group>"; };
 		A1F902AA192D96CF0071690F /* se_te.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_te.mp3; sourceTree = "<group>"; };
@@ -483,7 +489,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1E7CB37191F678700BFFD0A /* MarkerFelt.ttf */,
+				A1EE0C8419443B12007D0A60 /* fonts */,
 				A13A4324191936F10088B73E /* Sounds */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 				A18796841926FBBD00FDDFAA /* words.plist */,
@@ -505,6 +511,8 @@
 				A18796801926FA1900FDDFAA /* CameraSample.h */,
 				A103B25E192FAF2D005FD7FF /* SoundActionSampleScene.cpp */,
 				A103B25F192FAF2D005FD7FF /* SoundActionSampleScene.h */,
+				A12CFFAD194B6C84000F7430 /* DebugScene.cpp */,
+				A12CFFAE194B6C84000F7430 /* DebugScene.h */,
 			);
 			name = Scene;
 			path = ../Classes/SampleScene;
@@ -517,6 +525,8 @@
 				A13A43201918EC8F0088B73E /* AnzMenu.h */,
 				A103B25B192FA01B005FD7FF /* AnzSound.cpp */,
 				A103B25C192FA01B005FD7FF /* AnzSound.h */,
+				A10FACA61957D5B300046D27 /* AnzCoverLayer.cpp */,
+				A10FACA71957D5B300046D27 /* AnzCoverLayer.h */,
 			);
 			name = Libs;
 			path = ../Classes/Libs;
@@ -702,13 +712,13 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A1F902AC192D96CF0071690F /* se_click_2.mp3 in Resources */,
+				A1EE0C8519443B12007D0A60 /* fonts in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				A103B262192FB24B005FD7FF /* arasuji_03.mp3 in Resources */,
-				A1E7CB38191F678700BFFD0A /* MarkerFelt.ttf in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
@@ -745,7 +755,9 @@
 				A13A431C1918DE640088B73E /* MenuSampleScene.cpp in Sources */,
 				A13A432C19193FB90088B73E /* SoundMenuSampleScene.cpp in Sources */,
 				A18796811926FA1900FDDFAA /* CameraSample.cpp in Sources */,
+				A10FACA81957D5B300046D27 /* AnzCoverLayer.cpp in Sources */,
 				A13AE8E91923CC5700C53E59 /* MenuOffsetSample.cpp in Sources */,
+				A12CFFAF194B6C84000F7430 /* DebugScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

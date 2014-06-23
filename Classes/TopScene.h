@@ -31,6 +31,7 @@ private:
         kItemMenuOffsetSample,
         kItemCameraSample,
         kItemSoundActionSample,
+        kItemDebug,
         kItemCount,
     };
     enum Tags {
